@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>중소기업 IT·AI 지원사업 다이제스트</title>
+<style>
+:root {
+  --bg: #fff; --fg: #1a1a1a; --dim: #666; --line: #e5e5e5; --card: #fafafa;
+  --urgent: #d32f2f; --soon: #ed6c02; --later: #2e7d32; --none: #757575;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181c; --fg: #e8e8e8; --dim: #9aa0a6; --line: #2c2f34; --card: #1e2126;
+    --urgent: #ef5350; --soon: #ffa726; --later: #66bb6a; --none: #90959c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px 16px 64px; background: var(--bg); color: var(--fg);
+  font: 15px/1.6 -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
+}
+.wrap { max-width: 860px; margin: 0 auto; }
+h1 { font-size: 21px; margin: 0 0 6px; }
+.sub { color: var(--dim); font-size: 13px; margin-bottom: 20px; }
+.controls { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.chip {
+  border: 1px solid var(--line); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer;
+}
+.chip.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.toggle { font-size: 13px; color: var(--dim); margin: 12px 0 20px; }
+.toggle label { cursor: pointer; }
+h2 { font-size: 15px; margin: 28px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+h2 .cnt { color: var(--dim); font-weight: normal; }
+ul { list-style: none; margin: 0; padding: 0; }
+.row { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.row.hide { display: none; }
+.badge {
+  flex: 0 0 84px; font-size: 12px; font-weight: 600; padding-top: 2px;
+}
+.b-today, .b-urgent { color: var(--urgent); }
+.b-soon { color: var(--soon); }
+.b-later { color: var(--later); }
+.b-none, .b-closed { color: var(--none); }
+.body a { color: var(--fg); text-decoration: none; }
+.body a:hover { text-decoration: underline; }
+.meta { color: var(--dim); font-size: 12.5px; margin-top: 3px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
+          color: var(--dim); font-size: 12.5px; }
+footer code { font-size: 11.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>중소기업 IT·AI 지원사업 다이제스트</h1>
+  <div class="sub">
+    2026-09-07 20:19 KST 기준 · 전체 1,550건 중 키워드 일치 89건
+  </div>
+
+  <div class="controls">
+    <button class="chip on" data-f="all">전체</button>
+    <button class="chip" data-f="경영">경영</button><button class="chip" data-f="금융">금융</button><button class="chip" data-f="기술">기술</button><button class="chip" data-f="내수">내수</button><button class="chip" data-f="수출">수출</button><button class="chip" data-f="인력">인력</button><button class="chip" data-f="창업">창업</button>
+  </div>
+  <div class="toggle">
+    <label><input type="checkbox" id="showClosed"> 마감된 공고도 보기 (0건)</label>
+  </div>
+
+  <h2>마감일이 있는 공고 <span class="cnt">46건</span></h2>
+  <ul id="dated">
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-today">오늘 마감</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125732" target="_blank" rel="noopener">2026년 피지컬 AI 기반 휴머노이드 제조혁신센터 구축사업 수혜기업 통합 모집 공고</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 2026-09-07</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-today">오늘 마감</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125272" target="_blank" rel="noopener">2026년 AI응용제품신속상용화 지원사업(국방)사업 재공고</a>
+          <div class="meta">기술 · 국방부 · 중소기업 · 2026-09-07</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-urgent">D-1</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125907" target="_blank" rel="noopener">[전남광주] 철강ㆍ금속 제조기업 DXㆍAX 전환 혁신 기업지원 사업 모집 공고</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 2026-09-08</div>
+        </div>
+      </li>
+      <li class="row" data-field="창업" data-closed="0">
+        <span class="badge b-urgent">D-2</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125900" target="_blank" rel="noopener">[경기] 안산시 2026년 특화역량 BI 육성지원사업 ICTㆍSW 창업기업 사업화 지원사업 참여기업 모집 공고</a>
+          <div class="meta">창업 · 경기도 · 창업벤처 · 2026-09-09</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-urgent">D-2</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125525" target="_blank" rel="noopener">[충남] 2026년 AI 기반 태양광 설비 유지보수 솔루션 보급 시범사업 참여기업 모집 공고</a>
+          <div class="meta">경영 · 충청남도 · 중소기업 · 2026-09-09</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-urgent">D-2</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125307" target="_blank" rel="noopener">2026년 2차 기계장비산업기술개발사업(AI팩토리) 신규지원 대상과제 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-09</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-urgent">D-3</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125956" target="_blank" rel="noopener">[충북] 충주시 2026년 AI 파일럿 프로젝트 실증 지원 사업 수혜기업 추가 모집 공고(AI 자율제조 선도프로젝트)</a>
+          <div class="meta">기술 · 충청북도 · 중소기업 · 2026-09-10</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-urgent">D-3</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125850" target="_blank" rel="noopener">2026년 서울용산시제품제작소 AIㆍ스마트전자제품 금형지원 기업 모집 공고</a>
+          <div class="meta">기술 · 서울특별시 · 중소기업 · 2026-09-10</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126070" target="_blank" rel="noopener">2026년 첨단제조기술(AI-DfAM) 기반 모빌리티 제조 혁신거점 조성사업 기술지원 수요기업 모집 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126050" target="_blank" rel="noopener">2026년 AI선박 기자재 및 첨단부품 실증지원사업 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126001" target="_blank" rel="noopener">[충북] 2026년 지능형첨단부품산업의 디지털전환 거점 구축 사업 AI 융합 제품ㆍ솔루션 고도화 지원 수혜기업 추가 모집 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126000" target="_blank" rel="noopener">[충북] 2026년 지능형첨단부품산업의 디지털전환 거점 구축 사업 글로벌 플랫폼 연계 사업화 기술지원 수혜기업 추가 모집 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="수출" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125977" target="_blank" rel="noopener">[경기] 2026년 AI 클러스터 글로벌 프로그램(유럽) 2026 SLUSH 참가기업 모집 공고(경기도 AI 혁신클러스터 조성 사업)</a>
+          <div class="meta">수출 · 경기도 · 창업벤처 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125947" target="_blank" rel="noopener">2026년 AI 기반 주파수 간섭분석 및 전파예측기술 개발사업 신규지원 대상과제 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-soon">D-4</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125613" target="_blank" rel="noopener">2026년 마이데이터 컨설팅 및 교육 지원 사업 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-09-11</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-7</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126071" target="_blank" rel="noopener">[전남광주] AI어장 현장실증(시설ㆍ제품 고도화) 지원 모집 3차 재공고(AI기반 어장공간정보 빅데이터 플랫폼 구축 및 활용사업)</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 2026-09-14</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-soon">D-7</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125825" target="_blank" rel="noopener">2026년 온디바이스AI 제품개발ㆍ제조 지원기업 모집 공고(가전AX 확산을 위한 온디바이스 AI 제품개발 및 제조 기반구축)</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 2026-09-14</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-soon">D-7</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125570" target="_blank" rel="noopener">2026년 공개SW 및 SW안전 유공자 표창 계획 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-09-14</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-8</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126064" target="_blank" rel="noopener">2026년 제조 특화 온디바이스 AI 기반 자율제조 실증 기반 구축사업 기업지원 프로그램 수혜기업 모집 공고(산업혁신기반구축사업)</a>
+          <div class="meta">기술 · 경상북도 · 중소기업 · 2026-09-15</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-8</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126029" target="_blank" rel="noopener">[전남광주] 첨단로봇ㆍAI 활용 중소기업 제조혁신 사업 기업지원(실증지원) 2차 모집 공고</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 2026-09-15</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-9</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126158" target="_blank" rel="noopener">[충북] 2026년 정보보호 우수기업 발굴ㆍ지원사업 참여기업 모집 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-09-16</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-9</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126133" target="_blank" rel="noopener">[강원] 바이오ㆍ헬스케어 AI 대전환 실증기업 모집 공고(지역 주도형 AI 대전환 사업)</a>
+          <div class="meta">기술 · 강원특별자치도 · 중소기업 · 2026-09-16</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-9</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126119" target="_blank" rel="noopener">[울산] PBL 협력 프로젝트 지원사업 참여기업 모집 공고(지역특화 제조데이터 활성화 사업)</a>
+          <div class="meta">경영 · 중소벤처기업부 · 중소기업 · 2026-09-16</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-9</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125877" target="_blank" rel="noopener">2026년 3차 정보보호제품 성능평가 지원 공모 사업 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 2026-09-16</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-10</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125965" target="_blank" rel="noopener">[충북] 2026년 2차 충북 인공지능산업 컨트롤타워 기반 구축사업 AI융합 기획과제 모집 공고</a>
+          <div class="meta">기술 · 충청북도 · 중소기업 · 2026-09-17</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-11</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126159" target="_blank" rel="noopener">2026년 9차 정보보호 인증제품 조달청 벤처나라 추천기업 모집 공고(9월 추천)</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 창업벤처 · 2026-09-18</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-11</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126157" target="_blank" rel="noopener">[충남] 2026년 정보보호 우수사례 지원사업 수혜기업 추가 모집 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 2026-09-18</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-11</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126131" target="_blank" rel="noopener">2026년 제조 특화 온디바이스 AI 기반 자율제조 실증 기반 구축 사업 기업지원 참여기업 모집 공고(산업혁신기반구축 사업)</a>
+          <div class="meta">기술 · 경상북도 · 중소기업 · 2026-09-18</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-11</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125661" target="_blank" rel="noopener">[세종] 2026년 세종시 중소기업 정보보호 지원 사업 수요기업 모집 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-09-18</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-14</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125994" target="_blank" rel="noopener">2026년 지역 중소기업 AI 활용ㆍ확산 유공 포상 후보자 모집 공고</a>
+          <div class="meta">경영 · 중소벤처기업부 · 중소기업 · 2026-09-21</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-18</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122329" target="_blank" rel="noopener">[울산] 2026년 제조데이터 기반 AI 활용 컨설팅 지원기업 모집 공고</a>
+          <div class="meta">경영 · 울산광역시 · 중소기업 · 2026-09-25</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-23</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125199" target="_blank" rel="noopener">2026년 지역SW산업발전 유공자 및 공모전 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-09-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-25</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126110" target="_blank" rel="noopener">[경북] 포항시 지역 SW아웃소싱 개발기업 지원사업 참여기업 모집 재공고</a>
+          <div class="meta">기술 · 경상북도 · 중소기업 · 2026-10-02</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-29</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124154" target="_blank" rel="noopener">[부산] 2026년 중소기업 빅데이터 분석ㆍ활용 지원사업 데이터 가치평가 수요기업 모집 공고</a>
+          <div class="meta">기술 · 부산광역시 · 중소기업 · 2026-10-06</div>
+        </div>
+      </li>
+      <li class="row" data-field="인력" data-closed="0">
+        <span class="badge b-later">D-32</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125566" target="_blank" rel="noopener">[경남] 2026년 ICT 이노베이션스퀘어확산사업 기업협력 프로젝트 참여기업 모집 공고</a>
+          <div class="meta">인력 · 과학기술정보통신부 · 중소기업 · 2026-10-09</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-39</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125107" target="_blank" rel="noopener">[대구] 2026년 2차 데이터 산업 성장 및 활성화 지원사업(데이터 가치평가) 지원 참여기업 모집 공고</a>
+          <div class="meta">경영 · 대구광역시 · 중소기업 · 2026-10-16</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-53</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978" target="_blank" rel="noopener">중소제조 특화 Multi AI Agent 개발(R&amp;D) 점프업 Track 시행계획 공고</a>
+          <div class="meta">기술 · 중소벤처기업부 · 중소기업 · 2026-10-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-53</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124309" target="_blank" rel="noopener">[제주] 2026년 SW융합 규제개선 컨설팅 지원사업 모집 공고(SW융합클러스터 2.0사업)</a>
+          <div class="meta">경영 · 제주특별자치도 · 중소기업 · 2026-10-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-54</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123277" target="_blank" rel="noopener">[대전ㆍ충청] 2026년 중소기업 AI훈련확산 지원사업 참여기업 모집 공고</a>
+          <div class="meta">기술 · 고용노동부 · 중소기업 · 2026-10-31</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-84</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124214" target="_blank" rel="noopener">[충북] 2026년 SW제품 경쟁력 강화 지원사업 모집 공고</a>
+          <div class="meta">경영 · 충청북도 · 중소기업 · 2026-11-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-84</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123800" target="_blank" rel="noopener">2026년 중소기업 정보보호 지원사업 수요기업 모집 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-11-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-84</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123587" target="_blank" rel="noopener">[부산ㆍ울산ㆍ경남] 2026년 동남 정보보호클러스터 보안 테스팅 지원사업 공고</a>
+          <div class="meta">경영 · 경상남도 · 중소기업 · 2026-11-30</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-later">D-102</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123973" target="_blank" rel="noopener">2026년 마이데이터 전문가 상시자문 지원 공고</a>
+          <div class="meta">경영 · 과학기술정보통신부 · 중소기업 · 2026-12-18</div>
+        </div>
+      </li>
+      <li class="row" data-field="창업" data-closed="0">
+        <span class="badge b-later">D-115</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123753" target="_blank" rel="noopener">[경기] 안산시 2026년 특화역량 BI 육성지원사업 ICTㆍSW 창업 컨설팅 지원 참여기업 모집 공고</a>
+          <div class="meta">창업 · 경기도 · 창업벤처 · 2026-12-31</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-115</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122863" target="_blank" rel="noopener">[경북] 2026년 제조업AI융합기반조성사업 경북AX랩 활용기업 모집 공고</a>
+          <div class="meta">기술 · 경상북도 · 창업벤처 · 2026-12-31</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-later">D-115</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119235" target="_blank" rel="noopener">[부산] 2026년 AI실증지원센터 고성능 컴퓨터(HPC) 이용 지원사업 모집 공고</a>
+          <div class="meta">기술 · 부산광역시 · 중소기업 · 2026-12-31</div>
+        </div>
+      </li>
+  </ul>
+
+  <h2>상시 · 기간 미표기 <span class="cnt">43건</span></h2>
+  <ul id="undated">
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126209" target="_blank" rel="noopener">[부산] 2차 글로벌시장 대응 AI기반 공조부품 성능평가 인프라 고도화사업 지원사업 공고</a>
+          <div class="meta">기술 · 부산광역시 · 중소기업 · 모집 완료시</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126109" target="_blank" rel="noopener">[전북] 2026년 AI융합 지능형 농업 생태계 구축 사업 인공지능 기술고도화 지원사업 상시모집 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="인력" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125962" target="_blank" rel="noopener">[경북] 2026년 상인ㆍ소상공인 AI코칭 지원사업 참여자 모집 연장공고</a>
+          <div class="meta">인력 · 경상북도 · 소상공인 · 모집 완료시</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125928" target="_blank" rel="noopener">[경남] 창원시 2026년 강소특구 이노테크 기업육성 AI-CNC 기반 제품 실증 및 성능 검증 지원 사업 공고</a>
+          <div class="meta">기술 · 경상남도 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125888" target="_blank" rel="noopener">[전남광주] 2026년 AI융합 지능형 농업 생태계 구축 인공지능 기술 고도화(신뢰성평가) 지원사업 추가 모집 공고</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 차수별 상이</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125775" target="_blank" rel="noopener">[전북] 2026년 3차 인공지능 전환 도입 컨설팅 지원사업 수시 모집 공고(AX실증산단 구축사업)</a>
+          <div class="meta">경영 · 전북특별자치도 · 중소기업 · 수시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125707" target="_blank" rel="noopener">[충남ㆍ충북ㆍ대전ㆍ세종] 2026년 중소기업 AI훈련확산센터 참여기업 모집 공고</a>
+          <div class="meta">경영 · 고용노동부 · 중소기업 · 모집 완료시</div>
+        </div>
+      </li>
+      <li class="row" data-field="내수" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125560" target="_blank" rel="noopener">[서울] 서초구 2026년 소상공인 대상 AI 홍보 컨텐츠 제작지원 신청자 모집 공고</a>
+          <div class="meta">내수 · 서울특별시 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124926" target="_blank" rel="noopener">2026년 AI 기반 조명산업의 자원순환 및 서비스화 실증 기반구축 사업 기업지원사업 통합 상시 모집 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124903" target="_blank" rel="noopener">[경남] 창원시 2026년 창원지능형의료기기지원센터 활성화 지원사업 공고(AI 빅데이터 기반 의료바이오 첨단기기 연구제조센터 구축사업)</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 예산 소진 시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124841" target="_blank" rel="noopener">2026년 DXㆍAX 컨설팅 지원사업 모집 공고</a>
+          <div class="meta">기술 · 경기도 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124433" target="_blank" rel="noopener">[전남광주] 2026년 3차 인공지능 기술 고도화 지원사업 상시 모집 공고(AI융합 지능형 농업 생태계 구축)</a>
+          <div class="meta">기술 · 전남광주통합특별시 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124300" target="_blank" rel="noopener">AIoT융합부품 성능검증시스템 고도화사업 수혜기업모집 수시 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="인력" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124269" target="_blank" rel="noopener">[경남] 2026년 ICT 이노베이션스퀘어 확산사업 기업협력 프로젝트 참여기업 모집 공고</a>
+          <div class="meta">인력 · 과학기술정보통신부 · 중소기업 · 정원 마감시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124174" target="_blank" rel="noopener">2026년 중소기업 정보보호 특화지원사업 수요기업 모집 공고</a>
+          <div class="meta">경영 · 인천광역시 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123764" target="_blank" rel="noopener">AI융합 의료기기 신뢰성 강화 및 성능 평가ㆍ실증 사업 수혜기업 모집 공고</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123682" target="_blank" rel="noopener">2026년 ICT 중소기업 정보보호 지원 사업 수요기업 모집 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123596" target="_blank" rel="noopener">[서울ㆍ경기ㆍ인천ㆍ강원] 2026년 중소기업 AI활용 도입을 위한 AI훈련 참여기업 모집 공고</a>
+          <div class="meta">경영 · 고용노동부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123203" target="_blank" rel="noopener">AI기반 Age-Tech 산업 중심의 디지털의료제품 지원 바이오데이터 및 알고리즘 실증 기술서비스 모집 상시 공고(산업혁신기반구축ㆍ2차년도)</a>
+          <div class="meta">기술 · 산업통상부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123108" target="_blank" rel="noopener">[서울ㆍ인천ㆍ경기ㆍ강원] 2026년 중소기업 AI훈련확산센터 참여기업 모집 공고</a>
+          <div class="meta">경영 · 고용노동부 · 중소기업 · 모집 완료시</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123093" target="_blank" rel="noopener">[제주] 2026년 빅데이터 분석 및 데이터 활용 컨설팅 모집 공고(제주빅데이터센터 운영 사업)</a>
+          <div class="meta">경영 · 제주특별자치도 · 중소기업 · 수시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123023" target="_blank" rel="noopener">[경남] 2026년 사이버 위기대응 모의훈련 및 보안점검 수요기업 모집 공고(지역 정보보호 지원센터)</a>
+          <div class="meta">경영 · 경상남도 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123022" target="_blank" rel="noopener">[경남] 2026년 제조기업 정보보호 컨설팅 지원사업 수요기업 모집 공고(지역 거점 정보보호 클러스터 구축사업)</a>
+          <div class="meta">경영 · 경상남도 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122609" target="_blank" rel="noopener">2026년 경북AI데이터센터 테스트베드 실증지원 공고(데이터센터 테스트베드 조성 지원)</a>
+          <div class="meta">기술 · 경상북도 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="수출" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122551" target="_blank" rel="noopener">[울산] 2026년 AI무역지원센터 활용 해외 홍보 지원사업 모집 공고</a>
+          <div class="meta">수출 · 울산광역시 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="인력" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122497" target="_blank" rel="noopener">2026년 SW개발자 채용기업 모집 공고(K-Digital Training 벤처ㆍ스타트업 아카데미)</a>
+          <div class="meta">인력 · 고용노동부 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121956" target="_blank" rel="noopener">2026년 시흥시 (국비)금형 디지털전환 지원사업 기술지도 모집 공고</a>
+          <div class="meta">기술 · 경기도 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121749" target="_blank" rel="noopener">[전북] 인공지능 분야 기술지도 희망기업 모집 상시 공고(AI융합 지능형 농업 생태계 구축 사업)</a>
+          <div class="meta">기술 · 전북특별자치도 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="내수" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121480" target="_blank" rel="noopener">2026년 TV홈쇼핑 및 데이터홈쇼핑 입점지원사업 소상공인 모집 공고</a>
+          <div class="meta">내수 · 중소벤처기업부 · 소상공인 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121417" target="_blank" rel="noopener">[대구] 2026년 디지털전환 현장캠퍼스 지원대상 기업 모집 공고</a>
+          <div class="meta">기술 · 대구광역시 · 중소기업 · 세부사업별 상이</div>
+        </div>
+      </li>
+      <li class="row" data-field="금융" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121243" target="_blank" rel="noopener">[울산] 2026년 중소기업 AI인프라 육성자금 지원계획 변경 공고</a>
+          <div class="meta">금융 · 울산광역시 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120871" target="_blank" rel="noopener">[경북] 2026년 초거대 AI 기술 컨설팅 신규 대상기업 모집 공고(초거대 AI 클라우드 팜 실증 및 확산 환경 조성사업)</a>
+          <div class="meta">기술 · 경상북도 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="금융" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120620" target="_blank" rel="noopener">2026년 소프트웨어 지식재산권(IP) 평가보증 지원사업 공고</a>
+          <div class="meta">금융 · 과학기술정보통신부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120097" target="_blank" rel="noopener">2026년 데이터 품질인증 지원사업 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120091" target="_blank" rel="noopener">[부산] 2026년 서비스융복합연구센터 데이터 기반 융복합 서비스 개발 컨설팅 지원 공고</a>
+          <div class="meta">경영 · 부산광역시 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120083" target="_blank" rel="noopener">2026년 데이터 가치평가 지원사업 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119910" target="_blank" rel="noopener">2026년 정보보호제품 신속확인 신규 제품 수수료  지원 사업 안내 공고</a>
+          <div class="meta">기술 · 과학기술정보통신부 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119727" target="_blank" rel="noopener">[부산] 2026년 중소기업 빅데이터 분석 활용 지원사업 참가기업 모집 공고</a>
+          <div class="meta">경영 · 부산광역시 · 중소기업 · 세부사업별 상이</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118806" target="_blank" rel="noopener">[경남] 사천시ㆍ진주시 2026년 디지털전환(DX) 컨설팅 및 인력양성 지원 사업 수요기업 모집 공고</a>
+          <div class="meta">경영 · 경상남도 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118617" target="_blank" rel="noopener">[충북] 지능형첨단부품산업의 디지털전환 거점 구축 사업 오픈랩 AI 개발플랫폼 활용 지원 수혜기업 모집 공고</a>
+          <div class="meta">기술 · 충청북도 · 중소기업 · 상시 접수</div>
+        </div>
+      </li>
+      <li class="row" data-field="경영" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000117371" target="_blank" rel="noopener">[광주] 인공지능 유치기업 보조금 지원사업 모집 공고</a>
+          <div class="meta">경영 · 전남광주통합특별시 · 중소기업 · 예산 소진시까지</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000117019" target="_blank" rel="noopener">2026년 제조DX멘토단 활용지원사업 통합 공고</a>
+          <div class="meta">기술 · 중소벤처기업부 · 중소기업 · 세부사업별 상이</div>
+        </div>
+      </li>
+      <li class="row" data-field="기술" data-closed="0">
+        <span class="badge b-none">상시·미정</span>
+        <div class="body">
+          <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000116008" target="_blank" rel="noopener">제조 DX멘토단 활용지원(2026년 스마트 제조혁신 지원사업 통합 공고)</a>
+          <div class="meta">기술 · 중소벤처기업부 · 제조업 · 세부사업별 상이</div>
+        </div>
+      </li>
+  </ul>
+
+  <footer>
+    출처: 기업마당(bizinfo) · 데이터는 기업마당 지원사업정보 API에서 받았습니다.<br>
+    신청 자격과 마감 시각은 반드시 공고 원문에서 확인하세요.<br>
+    키워드: AI, 인공지능, ICT, SW, 소프트웨어, 데이터, 클라우드, 디지털전환, DX, 정보보호<br>
+    <code>snapshot 20260907T195208+0900</code>
+  </footer>
+
+</div>
+<script>
+(function () {
+  var chips = document.querySelectorAll('.chip');
+  var showClosed = document.getElementById('showClosed');
+  var current = 'all';
+
+  function apply() {
+    document.querySelectorAll('.row').forEach(function (row) {
+      var okField = (current === 'all') || (row.dataset.field === current);
+      var okClosed = showClosed.checked || row.dataset.closed === '0';
+      row.classList.toggle('hide', !(okField && okClosed));
+    });
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on');
+      current = c.dataset.f;
+      apply();
+    });
+  });
+  showClosed.addEventListener('change', apply);
+  apply();
+})();
+</script>
+</body>
+</html>
